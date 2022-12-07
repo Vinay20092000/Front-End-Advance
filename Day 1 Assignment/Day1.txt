@@ -1,0 +1,44 @@
+Q1 What are the different activities that we do using JavaScript in client side programming?
+__ 1.Web Applications
+   2.Web Development
+   3.Mobile Applications
+   4.Game
+   5.Presentations
+   6.Server Applications
+   
+Q2 What is JavaScript engine for Safari?
+__ JavaScriptCore 
+
+Q4 Do some changes and observe
+b. Is Filename case sensitive check practically?
+__ No, the filename is not case sensitive.
+
+   Assignment 2
+Q1 Is it possible to disable JavaScript in browser?  If yes, How to disable javascript in browser?
+__ Yes, it is possible to disable JavaScript in browser.
+   For Microsoft Edge, you must disable JavaScript from the Windows Group Policy Editor, rather than in the browser    settings. To do so, in Windows 10:
+   a.Launch the Edit Group Policy program.
+   b.Expand the User Configuration folder.
+   c.Expand the Administrative Templates folder.
+   d.Expand the Windows Components folder.
+   e.Expand the Microsoft Edge folder.
+   f.Double-click Allows you to run scripts, like Javascript.
+   g.Choose Disabled, and click Ok to confirm.
+Q2 What is the difference between undefined and not defined in JavaScript?
+__ The main difference between " undefined " and " not defined " is that " undefined " is a value that can be          assigned to a variable, while "not defined" indicates that a variable does not exist.
+
+Q3 Difference between ==  and ===?
+__ == is called as comparison operator.
+   == returns true only if the two operands are equal while === returns true only if both values and data types are    the same for the two variables.
+
+Q4 What does the isNaN() function?
+__ The isNaN () function determines whether a value is an illegal number (Not-a-Number). This function returns true    if the value equates to NaN. Otherwise it returns false.
+
+Q5 Difference between Client side JavaScript and Server side JavaScript?
+__ Client-Side Scripting
+   The script for the client-side scripting runs by using a browser. It is present already in any user’s computer.
+   Languages like VB Script, CSS, HTML, Javascript, etc., are very common in the case of client-side scripting.
+
+   Server Side Scripting
+   For server-side scripting, a web server serves as the medium for running it. They create the pages that one         would send to the browser.
+   Languages like Ruby on Rails, Perl, ASP, Python, ColdFusion, PHP, etc., come into play in the case of server-       side scripting.
