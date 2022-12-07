@@ -1,0 +1,37 @@
+<html>
+    <head></head>
+    <body>
+        <h1>Mathematical Operations</h1><hr/>
+        First Number : <input type="text" id="t1"/><br><br>
+        Second Number : <input type="text" id="t2"/><br><br>
+        <input type="button" value="Add" onclick="fn_add()"/>
+        <input type="button" value="Sub" onclick="fn_sub()"/>
+        <input type="button" value="Multiply" onclick="fn_mul()"/>
+        <p id="p1"></p>
+        <script>
+            function fn_add()
+            {
+                var paraObj=document.getElementById("p1");
+                var txtObj1=document.getElementById("t1");
+                var txtObj2=document.getElementById("t2");
+                var x = parseInt(txtObj1.value);
+                var y = parseInt(txtObj2.value);
+                paraObj.innerHTML = "Result : " + (x + y);
+            }
+            function fn_sub()
+            {
+                var fnum = document.getElementById("t1");
+                var snum = document.getElementById("t2");
+                var paraObj = document.getElementById("p1");
+                paraObj.innerHTML = "Result : " + (fnum.value - snum.value);
+            }
+            function fn_mul()
+            {
+                var fnum = document.getElementById("t1");
+                var snum = document.getElementById("t2");
+                var paraObj = document.getElementById("p1");
+                paraObj.innerHTML = "Result : " + fnum.value * snum.value;
+            }
+        </script>
+    </body>
+</html>

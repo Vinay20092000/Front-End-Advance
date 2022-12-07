@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <style>
+            table,th,td,tr{
+                border: 2px double black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Operations on Arrays</h1><hr/>
+        <input type="button" value="Show Data" onclick="fn_show()"/><br/><br/>
+        <table id="t1">
+        </table>
+        <script>
+            function fn_show()
+            {
+                var array=["HTML5","CSS3","jQuery","AngularJS","Bootstrap"];
+                var str="";
+                for(var i = 0; i < array.length;  i++)
+				{					      
+					str +="<tr><td>"+(i+1)+"</td>";
+                    str += "<td>"+array[i]+"</td></tr>";	
+				}
+                var tabObj=document.getElementById("t1");
+                tabObj.innerHTML=str;
+            }
+        </script>
+    </body>
+</html>

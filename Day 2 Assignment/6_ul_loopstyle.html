@@ -1,0 +1,27 @@
+<html>
+    <head></head>
+    <body>
+    <h1>JavaScript Programming -- Loops</h1><hr/>
+    <input type="button" value="For" onclick="fn_for()"/>
+    <ul id="u1"></ul>
+    <script>
+        function    fn_for()
+        {    
+            var  uObj  =  document.getElementById("u1");        
+            var str  = "";
+            for(var i = 1; i <= 10; i++)
+            {
+                 if(i%2 == 0)
+                {
+                    str  += "<li style='color:blue'>" + "Welcome to JavaScript -  " + i  +  "<br/>";
+                }
+                else
+                {
+                    str  += "<li style='color:green'>" + "Welcome to JavaScript -  " + i  +  "<br/>";
+                }
+            }
+            uObj.innerHTML = str;
+        }
+    </script>
+    </body>
+</html>

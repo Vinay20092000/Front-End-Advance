@@ -1,0 +1,46 @@
+<html>
+    <head></head>
+    <body>
+        <h1>JavaScript Programming -- Loops</h1><hr/>
+        <input type="button" value="while" onclick="fn_1()"/>
+        <input type="button" value="for" onclick="fn_2()"/>
+        <input type="button" value="do while" onclick="fn_3()"/>
+        <ul type="disc" id="u1"></ul>
+        <script>
+            function fn_1()
+            {
+                var paraObj=document.getElementById("u1");
+                var str="";
+                var i=1;
+                while( i<=10)
+                {
+                    str+= "<li>" + "Welcome to JavaScript using while loop - "+i;
+                    i++;
+                }
+                paraObj.innerHTML=str;
+            }
+            function fn_2()
+            {
+                var paraObj=document.getElementById("u1");
+                var str="";
+                for ( i=1; i<=10; i++)
+                {
+                    str+= "<li>" + "Welcome to JavaScript using for loop - "+ i;
+                }
+                paraObj.innerHTML=str;
+            }
+            function fn_3()
+            {
+                var paraObj=document.getElementById("u1");
+                var str="";
+                var i=1;
+                do
+                {
+                    str+="<li>" + "Welcome to JavaScript using dowhile loop - "+ i;
+                    i++;
+                }while(i<=10);
+                paraObj.innerHTML=str;
+            }
+        </script>
+    </body>
+</html>
