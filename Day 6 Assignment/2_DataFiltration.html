@@ -1,0 +1,67 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h2>Data Filtration Using JavaScript</h2><hr/>
+        Search Array : <input type="text" id="text1"/>
+        <input type="button" value="Find By Empno " onclick="empno()"/>
+        <input type="button" value="Find By Job" onclick="job()"/><br/><br/>
+        <table id="table" border="2" cell-padding="10">
+            <th>Empno</th>
+            <th>Ename</th>
+            <th>Job</th>
+            <th>Salary</th>
+            <th>Deptno</th>
+        </table>
+        <script>
+           var arr = [{Empno:"100",Ename:"Tokyo",Job:"Lead",Salary:"23332",Deptno:"123"},
+            {Empno:"101",Ename:"Helsinki",Job:"Technician",Salary:"24442",Deptno:"456"},
+            {Empno:"102",Ename:"Oslo",Job:"HR",Salary:"25552",Deptno:"789"},
+            {Empno:"103",Ename:"Nairobi",Job:"Lead",Salary:"26662",Deptno:"012"},
+            {Empno:"104",Ename:"Professor",Job:"Strategist",Salary:"27772",Deptno:"345"}]
+            
+            var text=document.getElementById("text1");
+            var tableObj=document.getElementById("table");
+
+            function empno()
+            {
+                const found = arr.find(obj=>obj.Empno==text1.value);
+                var row=tableObj.insertRow(-1);
+
+                var cell1=row.insertCell(0);
+                var cell2=row.insertCell(1);
+                var cell3=row.insertCell(2);
+                var cell4=row.insertCell(3);
+                var cell5=row.insertCell(4);
+
+                cell1.innerHTML= found.Empno;
+                cell2.innerHTML= found.Ename;
+                cell3.innerHTML= found.Job;
+                cell4.innerHTML= found.Salary;
+                cell5.innerHTML= found.Deptno;
+            }
+
+            function job()
+            {
+                const found=arr.filter(obj=>obj.Job==text1.value);
+                
+                
+                for(item of found){
+                var row=tableObj.insertRow(-1);
+                var cell1=row.insertCell(0);
+                var cell2=row.insertCell(1);
+                var cell3=row.insertCell(2);
+                var cell4=row.insertCell(3);
+                var cell5=row.insertCell(4);
+
+
+                cell1.innerHTML= item.Empno;
+                cell2.innerHTML= item.Ename;
+                cell3.innerHTML= item.Job;
+                cell5.innerHTML= item.Deptno;
+                cell4.innerHTML= item.Salary;}
+            }
+
+        </script>
+    </body>
+</html>

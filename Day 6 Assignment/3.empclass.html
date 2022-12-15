@@ -1,0 +1,28 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            class Employee
+            {
+                constructor(empno,ename,job)
+                {
+                    this.empno=empno;
+                    this.ename=ename;
+                    this.job=job;
+                }
+                showDetails()
+                {
+                let str=`empno : ${this.empno},ename:${this.ename},job:${this.job}`;
+                 console.log(str);
+                }
+            }
+            var emp=new Employee("1243","Scott","CA");
+            emp.showDetails();
+            
+            
+          
+        </script>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+<html>
+    <head></head>
+    <body>
+        <h3>Asynchronous Programming in  JavaScript</h3><hr/>
+        <button onclick="fn_getData()">Get Data</button><br/><br/>
+        <table id="table1" border="2" padding="10" style="visibility: hidden;" >
+            <th>Name</th>
+            <th>City</th>
+            <th>Country</th>
+        </table>
+        <p id="p1" style="color: red;"></p>
+        <script>
+            var tabObj=document.getElementById("table1");
+            var warnObj=document.getElementById("p1");
+            function fn_getData()
+            {
+                
+                let url="https://www.w3schools.com/angular/customers.php";
+                fetch(url).then ((response)=>
+                {
+                    response.json().then((resData)=>
+                    {
+                 
+                    displayData(resData.records);
+                    });
+                 })
+                 .catch((error)=>
+                 {
+                    warnObj.innerHTML="<p>"+error+"</p>";
+                 });
+            }
+            function displayData(dataArray)
+            {
+                tabObj.style.visibility="visible";
+                for(var i=1;i<tabObj.rows.length;)
+                {tabObj.deleteRow(i);}
+
+                for (item of dataArray)
+                {
+                var row=tabObj.insertRow(-1);
+
+                var cell1=row.insertCell(0);
+                var cell2=row.insertCell(1);
+                var cell3=row.insertCell(2);
+
+                cell1.innerHTML=item.Name;
+                cell2.innerHTML=item.City;
+                cell3.innerHTML=item.Country;
+                }
+            }
+        </script>
+    </body>
+</html>

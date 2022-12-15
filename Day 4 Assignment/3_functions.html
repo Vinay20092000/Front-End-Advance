@@ -1,0 +1,57 @@
+<html>
+    <head>
+    </head>
+    <body>
+
+        <input type="button" value="Even Numbers are" onclick="even()"/><br/>
+        <span id="s1"></span><br/><br/>
+        
+        X : <input type="text" id="i1"><br/>
+        Y : <input type="text" id="i2"><br/>
+        <input type="button" value="Power Of" onclick="power()"/><br/>
+        Power Of : <span id="s2"></span><br/><br/>
+           
+        Enter the text here : <input type="text" id="i3"><br/>
+        <input type="button" value="No. of Words" onclick="words()"/><br/>
+        Total No. of Words are : <span id="s3"></span><br/>
+
+
+        <script>
+            function even()
+            {
+            var arr=[0,1,2,22,34,21,357,543,998];
+            var resArr=[];
+            var j=0;
+            for (var i=0;i<arr.length;i++)
+            {
+                if(arr[i]%2==0 && arr[i]!=0)
+                {
+                    resArr[j]=arr[i];
+                    j++;
+                }
+            }
+            var spanObj=document.getElementById("s1");
+            spanObj.innerText=resArr;
+            // console.log(resArr);
+            }
+
+            function power()
+            {
+                var x=document.getElementById("i1");
+                var y=document.getElementById("i2");
+                var z=document.getElementById("s2");
+                z.innerHTML= Math.pow(x.value,y.value);
+            }
+
+            function words()
+            {
+                var text=document.getElementById("i3");
+                var res=document.getElementById("s3");
+                var arr=text.value;
+                var str=arr.split(" ");
+                res.innerHTML=str.length;
+
+            }
+        </script>
+    </body>
+</html>

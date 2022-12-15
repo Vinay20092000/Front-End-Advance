@@ -1,0 +1,46 @@
+<html>
+    <head></head>
+    <body>
+       
+        <h2>Product's amount calculator</h2><hr/>
+        <h3 style="color:red ;">Note : Get 10% discount on purchasing more than 10 Quantities.  </h3>
+        <fieldset>
+            <legend>Bill</legend> 
+            Product Name : <input type="text" id="t1" /><br><br>
+            Unit Price : <input type="text" id="t2" /><br><br>
+            Quantity : <input type="text" id="t3"/><br><br>
+            <input type="button" value="Get Total" id="b1"/>
+            <p id="p1"></p>
+            <p id="p2"></p>
+        </fieldset>
+        
+        <script  src="https://code.jquery.com/jquery-3.6.2.min.js"></script>
+
+        <script>
+            $(document).ready(function()
+            {
+                $("#b1").click(function()
+                {   
+                    $("#p1,#p2").html("");
+                    let unitPrice = $("#t2").val();
+                    let quantity = $("#t3").val();
+                    let totalprice = unitPrice*quantity;
+                    $("#p2").css("color","green");
+    
+                    if(quantity>10)
+                    {
+                        let discount = totalprice-(0.1*totalprice);
+                        $("#p1").html("Total Price : " + totalprice);
+                        $("#p2").html("Price after Discount : " + discount);
+                    }
+                    else
+                    {
+                        $("#p1").html("Total Price : " + totalprice);
+                    }
+
+
+                });
+            });
+        </script>
+    </body>
+</html>

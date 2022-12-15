@@ -1,0 +1,61 @@
+<html>
+<body>
+
+<h3>JavaScript Function binding</h3>
+<hr/>
+ 
+ <input type="button"  onclick="fn_showPerson()"  value="Show Person Details"  />
+ <input type="button" onclick="fn_showEmployee()"  value="Show Emp Details"  />
+ <input type="button" onclick="fn_showStudent()"  value="Show Student Details"  />
+
+
+<p id="demo"></p>
+
+<script>
+function  getFullName()
+{
+	  let str  = `First Name  :  ${this.firstName},  Last Name  :   ${this.lastName}`;
+	  
+	  document.getElementById("demo").innerHTML = str;
+}
+
+const person = {
+  firstName:"Ravi",
+  lastName: "Kiran" 
+}
+
+const employee = {
+  firstName:"Steve",
+  lastName: "Jobs" 
+}
+
+const student={
+    firstName:"Michael",
+    lastName:"Scoffield"
+}
+ 
+ // button1 click 
+function  fn_showPerson()
+{
+	 person.getFullName =  getFullName.bind(person);
+	  person.getFullName();
+ }
+ 
+ // button2 click 
+ function  fn_showEmployee()
+ {
+		employee.showFullName  =  getFullName.bind(employee);
+		employee.showFullName();
+ }
+
+ function fn_showStudent()
+ {
+        student.showFullName =getFullName.bind(student);
+        student.showFullName();
+ }
+
+ 
+</script>
+
+</body>
+</html>

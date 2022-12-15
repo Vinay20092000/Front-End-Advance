@@ -1,0 +1,56 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <h3>JavaScript Programming - Event Handling</h3><hr/>
+        Select Category : <select id="s1" onchange="update()">
+        <option>--Select--</option>
+        <option>Laptops</option>
+        <option>Mobile Phones</option>
+        <option>Sound Systems</option>
+        </select>
+        <ol id="u1"></ol>
+
+        <script>
+            var arr1=["MSI","Asus","Lenovo","HP","Dell"];
+            var arr2=["Samsung","Xiaomi","Apple","Vivo","Oppo"];
+            var arr3=["Boat","Noise","Sony","JBL","Skullcandy"];
+            function update()
+            {
+                var selectObj=document.getElementById("s1");
+                var product=selectObj.value;
+                if(product=="Laptops")
+                {
+                    var listObj=document.getElementById("u1");
+                    var str1="";
+                    for(var i=0; i<arr1.length; i++)
+                    {
+                        str1+="<li>"+ arr1[i] +"</li>";
+                    }
+                    listObj.innerHTML=str1;
+                }
+                else if(product=="Mobile Phones")
+                {
+                    var listObj=document.getElementById("u1");
+                    var str2="";
+                    for(var i=0; i<arr1.length; i++)
+                    {
+                        str2+="<li>"+ arr2[i] +"</li>";
+                    }
+                    listObj.innerHTML=str2;
+                }
+                else if(product=="Sound Systems")
+                {
+                    var listObj=document.getElementById("u1");
+                    var str3="";
+                    for(var i=0; i<arr1.length; i++)
+                    {
+                        str3+="<li>"+ arr3[i] +"</li>";
+                    }
+                    listObj.innerHTML=str3;
+                }
+                
+            }
+        </script>
+    </body>
+</html>
