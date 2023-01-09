@@ -1,0 +1,39 @@
+Q1 What are pipes in Angular??
+__ Pipes in Angular are used to transform the data before displaying to view. Angular has some built-In pipes like  lowercase, uppercase, date, percent, currency, etc.And to achieve this transformation we use the pipe operator ( | ).
+Ex:-
+<p>Uppercase - {{name | uppercase}}</p>  
+<p>Lowercase - {{name | lowercase}}</p>
+<p>Currency - {{salary | currency:'INR'}}</p>  
+<p>Date - {{birthday | date:'dd/MM/yyyy'}}</p>  
+
+Q2 What is Gitbash?
+__ Git Bash is a Microsoft Windows application with a Git command-line shell experience and utilities, such as Secure Shell Protocol (SSH), Secure Copy Protocol (SCP), CAT (concatenate command), etc. Bash is an acronym for Bourne Again Shell, which is a GNU Project shell.
+A shell is used to interface with an operating system by executing commands, and Bash is the default shell used on Linux and macOS.
+
+Q4 How to use DecimalPipe and PercentPipe in Angular?  Check with an example?
+__ DecimalPipe
+DecimalPipe is an angular Pipe API and belongs to CommonModule. DecimalPipe is used to format a number as decimal number according to locale rules. It uses number keyword with pipe operator. Find the syntax.
+number_expression | number[:digitInfo]
+Finally we get a decimal number as text. Find the description.
+number_expression: An angular expression that will give output a number.
+number : A pipe keyword that is used with pipe operator.
+digitInfo : It defines number format.
+Now we will understand how to use digitInfo. The syntax for digitInfo is as follows.
+{minIntegerDigits}.{minFractionDigits}-{maxFractionDigits}
+Find the description.
+minIntegerDigits : Minimum number of integer digits. Default is 1.
+minFractionDigits : Minimum number of fraction digits. Default is 0.
+maxFractionDigits : Maximum number of fraction digits. Default is 3.
+
+__ PercentPipe
+Angular PercentPipe is an angular Pipe API that formats a number as a percentage according to locale rules. It belongs to CommonModule. Find the syntax.
+number_expression | percent[:digitInfo]
+Find the description.
+number_expression: An angular expression that will give output a number.
+percent : A pipe keyword that is used with pipe operator and it converts number into percent.
+digitInfo: It defines a percentage format. We have described the use of digitInfo in DecimalPipe section. It is used with following syntax.
+{minIntegerDigits}.{minFractionDigits}-{maxFractionDigits}
+Default format:
+minIntegerDigits = 1
+minFractionDigits = 0
+maxFractionDigits = 3

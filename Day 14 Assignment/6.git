@@ -1,0 +1,68 @@
+vinmb@USHYDVINMB2 MINGW64 ~/Desktop/Git_demo2
+$ git init
+Initialized empty Git repository in C:/Users/vinmb/Desktop/Git_demo2/.git/
+
+vinmb@USHYDVINMB2 MINGW64 ~/Desktop/Git_demo2 (master)
+$ git config --global user.name
+Vinay17
+
+vinmb@USHYDVINMB2 MINGW64 ~/Desktop/Git_demo2 (master)
+$ git pull origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+vinmb@USHYDVINMB2 MINGW64 ~/Desktop/Git_demo2 (master)
+$ git remote add origin "https://github.com/Vinay17/TestDemo.git"
+
+vinmb@USHYDVINMB2 MINGW64 ~/Desktop/Git_demo2 (master)
+$ git pull origin master
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 222 bytes | 14.00 KiB/s, done.
+From https://github.com/Vinay17/TestDemo
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+
+vinmb@USHYDVINMB2 MINGW64 ~/Desktop/Git_demo2 (master)
+$ touch customer.component.ts
+
+vinmb@USHYDVINMB2 MINGW64 ~/Desktop/Git_demo2 (master)
+$ touch customer.component.html
+
+vinmb@USHYDVINMB2MINGW64 ~/Desktop/Git_demo2 (master)
+$ touch customer.component.css
+
+vinmb@USHYDVINMB2 MINGW64 ~/Desktop/Git_demo2 (master)
+$ git add -A
+
+vinmb@USHYDVINMB2 MINGW64 ~/Desktop/Git_demo2 (master)
+$ git commit -m "Second commit"
+[master 794a233] Second commit
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 customer.component.css
+ create mode 100644 customer.component.html
+ create mode 100644 customer.component.ts
+
+vinmb@USHYDVINMB2 MINGW64 ~/Desktop/Git_demo2 (master)
+$ git push origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 273 bytes | 273.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Vinay17/TestDemo.git
+   5f7f41c..794a233  master -> master
+
+vinmb@USHYDVINMB2 MINGW64 ~/Desktop/Git_demo2 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+vinmb@USHYDVINMB2 MINGW64 ~/Desktop/Git_demo2 (master)
+$

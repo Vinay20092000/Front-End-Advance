@@ -1,0 +1,43 @@
+vinmb@USHYDVINMB2 MINGW64 ~/Desktop/Git_Angular_Demo (master)
+$ git config --global user.name "Vinay17"
+
+vinmb@USHYDVINMB2 MINGW64 ~/Desktop/Git_Angular_Demo (master)
+$ git config --global user.email "vinaypubg17@gmail.com"
+
+vinmb@USHYDVINMB2 MINGW64 ~/Desktop/Git_Angular_Demo (master)
+$ git config --global user.email
+vinaypubg17@gmail.com
+
+vinmb@USHYDVINMB2 MINGW64 ~/Desktop/Git_Angular_Demo (master)
+$ git config --global user.name
+Vinay17
+
+
+vinmb@USHYDVINMB2 MINGW64 ~/Desktop/Git_Angular_Demo (master)
+$ git remote -v
+
+
+vinmb@USHYDVINMB2 MINGW64 ~/Desktop/Git_Angular_Demo (master)
+$ git remote add origin "https://github.com/Vinay17/TestDemo.git"
+
+
+vinmb@USHYDVINMB2 MINGW64 ~/Desktop/Git_Angular_Demo (master)
+$ git remote -v
+origin  https://github.com/Vinay17/TestDemo.git (fetch)
+origin  https://github.com/Vinay17/TestDemo.git (push)
+
+
+vinmb@USHYDVINMB2 MINGW64 ~/Desktop/Git_Angular_Demo (master)
+$ git push origin master
+info: please complete authentication in your browser...
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 242 bytes | 242.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Vinay17/TestDemo.git
+ * [new branch]      master -> master
+
+
+vinmb@USHYDVINMB2 MINGW64 ~/Desktop/Git_Angular_Demo (master)
