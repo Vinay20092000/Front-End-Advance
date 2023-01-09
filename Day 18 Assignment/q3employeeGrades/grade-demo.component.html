@@ -1,0 +1,27 @@
+<H1 align="center">Employee Details</H1><hr/>
+<table align="center" border="2" >
+    <tr style="background-color: pink;">
+        <th>S.No.</th>
+        <th>Employee Name</th>
+        <th>Performance Grades</th>
+    </tr>
+    <tr  *ngFor="let item of user" style="background-color: rgb(128, 233, 128);">
+        <td>{{item.no}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.pgrade}}</td>
+    </tr>
+</table>
+
+<h2 align="center">Custom Pipes</h2><hr/>
+<table align="center" border="2" >
+    <tr style="background-color: pink;">
+        <th>S.No.</th>
+        <th>Employee Name</th>
+        <th>Performance Grades</th>
+    </tr>
+    <tr  *ngFor="let item of user" style="background-color: rgb(128, 233, 128);">
+        <td>{{item.no}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.pgrade|gradepipe}}</td>
+    </tr>
+</table>
