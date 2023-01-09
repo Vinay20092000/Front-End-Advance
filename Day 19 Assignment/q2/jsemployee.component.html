@@ -1,0 +1,28 @@
+<h3>AJAX Calls using HttpClient in Angular</h3>
+<hr/>
+
+<input type="text"  [(ngModel)]="name"  placeholder="Employee Name"  />
+<input type="text"  [(ngModel)]="city"  placeholder="City Name"  />
+<input type="text"  [(ngModel)]="email"  placeholder="E-mail Id"  />
+<input type="text"  [(ngModel)]="age"  placeholder="Age"  />
+<br/><br/>
+
+<input type="button" (click)=" getData_click()" value="Get Employee Data"> 
+<input type="button" (click)="postData_click()" value="Add Employee Data"> <br><br>
+
+<table border="2" cellspacing="0">
+    <tr>
+        <th>Employee ID</th>
+        <th>Employee Name</th>
+        <th>City</th>
+        <th>Employee Email</th>
+        <th>Employee Age</th>
+    </tr>
+    <tr *ngFor="let item of empsArray">
+        <td>{{item.employeeId}}</td>
+        <td>{{item.name}}</td>
+        <td>{{item.city}}</td>
+        <td>{{item.email}}</td>
+        <td>{{item.age}}</td>
+    </tr>
+</table>
