@@ -1,0 +1,95 @@
+<html>
+    <head>
+    <style>
+        .error
+        {
+            color : red;
+        }
+    </style>
+    </head>
+    <body>
+        <h3> Perform Validations using  jQuery   </h3><hr/><br/><br/>
+        Person Name : <input type="text" id="t1" autofocus/><br/><br/>
+        Person Contact Number : <input type="text" id="t2" maxlength="10"/><br/><br/>
+        Vehicle Number : <input type="text" id="t3"/><br/><br/>
+        City Name : <input type="text" id="t4"/><br/><br/>
+        Enter number  :  <input type="text"  id="t7" />  
+	
+        <script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+
+                $("#t1").keyup(function()
+                {
+                    $("#sp1").remove();
+                    $("#sp2").remove();
+
+                    var inputVal=$("#t1").val();
+                    var nameReg = /^([A-Za-z])+$/;
+
+                    if( inputVal.length > 10)
+                    {
+                        $(this).after('<span id="sp1"  class="error">10 Characters Only.</span>');
+                    } 
+                    else if( nameReg.test(inputVal)  ==  false )
+                    {
+                        $(this).after('<span id="sp2"  class="error">Alphabets Only.</span>');
+                    }
+                });
+
+                $("#t2").keyup(function()
+                {
+                    $("#sp3").remove();
+
+                    var inputVal=$("#t2").val();
+                    var numberReg=/^([0-9])+$/;
+
+                    if( numberReg.test(inputVal)== false)
+                    {
+                        $(this).after('<span id="sp3" class="error">Enter correct number.</span>');
+                    }
+                });
+
+                $("#t3").keyup(function()
+                {
+                    $("#sp4").remove();
+
+                    var inputVal = $("#t3").val();
+                    var vehReg=/^([A-Za-z]{2}[0-9]{2}[A-Za-z]{2}[0-9]{4})+$/;
+
+                    if(vehReg.test(inputVal)== false)
+                    {
+                        $(this).after('<span id="sp4" class="error">Enter Correct Vehicle Number.</span>');
+                    }
+                });
+
+                $("#t4").keyup(function()
+                {
+                    $("#sp5").remove();
+                    
+                    var inputVal=$("#t4").val();
+                    var cityReg = /^([A-Z])+$/;
+
+                    if( cityReg.test(inputVal)  ==  false )
+                    {
+                        $(this).after('<span id="sp5"  class="error">UpperCase Alphabets Only.</span>');
+                    }
+                });
+
+                $('#t7').keyup(function()
+        {
+            $("#sp6").remove();		
+            var inputVal = $("#t7").val();				
+            var numericReg = /^([0-9])+$/;
+            if(  numericReg.test(inputVal)  ==  false  &&  inputVal.length >  0) 
+                {
+                    $(this).after('<span id="sp6"  class="error">Numeric characters only.</span>');
+                }
+                    
+        });
+
+            });
+        </script>
+    </body>
+</html>

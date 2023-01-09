@@ -1,0 +1,28 @@
+<html>
+    <head>
+
+    </head>
+    <body style="background-color: antiquewhite;">
+        <h2>Display CSV Values in List Format using jQuery.</h2><hr/>
+        Input String : <input type="text" id="t1"/> <button id="bt1">Get Data</button>
+        <p id="p1"> </p>
+        <script  src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+        <script>
+            $(document).ready(function()
+            {
+                $("#bt1").click(function()
+                {
+                    $("#p1").text("");
+                    let csv = $("#t1").val().toUpperCase();
+                    let csvArr = csv.split(",");
+                    for(items of csvArr)
+                    {
+                        
+                        $("#p1").append("<li>"+items+"</li>");
+                        
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
