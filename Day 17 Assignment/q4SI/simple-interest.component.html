@@ -1,0 +1,22 @@
+<fieldset style="background-color: rgb(48, 48, 165)
+;color:antiquewhite;width: fit-content;" >
+<h2>Simple Interest Calculator</h2>
+    Principal Amount : <input type="number" [(ngModel)]="amount"><br><br/>
+    Rate of Interest % : <input type="number" [(ngModel)]="rate"><br/><br/>
+    Period(in Years) : 
+    <select [(ngModel)]="period">
+        <option>--select</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+    </select><br/><br/>
+    <button style="width:300px;height: 40px;" (click)="calculate_click()"><label>Calculate SI</label></button><br/><br/>
+    <p>Simple Interest : {{si}}</p>
+    <p>Total Amount : {{total}}</p>
+</fieldset>

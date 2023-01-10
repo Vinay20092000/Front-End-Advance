@@ -1,0 +1,6 @@
+<fieldset>
+    UserID: <input type="text" [(ngModel)]="uid"><br/><br/>
+    Password: <input type="password" [(ngModel)]="pwd"><br/><br/>
+    <button (click)="Login_click()" [disabled]="isLoginButtonDisabled">Login</button>
+    <p [style.color]="col">{{result}}</p>
+</fieldset>
