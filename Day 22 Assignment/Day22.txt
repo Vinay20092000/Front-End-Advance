@@ -1,0 +1,2 @@
+Q1 What is Single Responsibility Principle?
+In React, the Single Responsibility Principle means that a component is required to have only one reason to change. In short, the Single Responsibility Principle means that code with the same functionality should not exist in multiple places. Component Composition makes SRP easier to maintain so that there can be a single source of truth.
