@@ -1,0 +1,9 @@
+Q1 What is MVC and MVVM?
+The MVC Framework is an architectural pattern that separates an applications into three main logical components Model, View, and Controller. Hence the abbreviation MVC. The full form MVC is Model View Controller.
+In this architecture, a component is built to handle specific development aspects of an application. MVC separates the business logic and presentation layer from each other. This architectural pattern mainly used for desktop graphical user interfaces (GUIs).
+MVVM architecture facilitates a separation of development of the graphical user interface with the help of mark-up language or GUI code. The full form of MVVM is Model–View–ViewModel.
+The view model of MVVM is a value converter that means that it is view model’s responsibility for exposing the data objects from the Model in such a way that objects are easily managed and presented.
+
+Q2 What are keys in React JS? How the keys are involved in array processing in React?
+Keys in react are used to identify a list of DOM elements from the same hierarchy internally.
+So if you are iterating over an array to show a list of li elements, each of the li elements needs a unique identifier specified by the key property. This usually can be the id of your database item or the index of the array.
